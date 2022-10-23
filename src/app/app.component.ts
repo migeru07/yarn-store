@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yarn-store';
+//https://www.w3schools.com/howto/img_avatar2.png
+  imgParent = '';
+
 }
