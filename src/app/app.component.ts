@@ -10,4 +10,8 @@ export class AppComponent {
 //https://www.w3schools.com/howto/img_avatar2.png
   imgParent = '';
 
+  onLoaded(img: string) {
+    console.log('log padre', img);
+  }
+
 }
