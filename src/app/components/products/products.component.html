@@ -1,0 +1,9 @@
+<p> Cantidad de productos agregados:  {{ myShoppingCart.length }}</p>
+<p> Y el valor total acumulado es: {{ total }}</p>
+<div class="products--grid">
+  <app-product
+    [producto]="product"
+    *ngFor="let product of products"
+    (addedProduct)="onAddToShoppingCart($event)"
+  ></app-product>
+</div>
