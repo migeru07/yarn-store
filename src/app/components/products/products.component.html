@@ -1,5 +1,6 @@
-<p> Cantidad de productos agregados:  {{ myShoppingCart.length }}</p>
+<p> Cantidad de productos agregados:  {{ myShoppingCart.length }} en el día {{ today | date: 'short' }}</p>
 <p> Y el valor total acumulado es: {{ total }}</p>
+<p> Fue lanzado el : {{ date | timeAgo }}</p>
 <div class="products--grid">
   <app-product
     [producto]="product"
