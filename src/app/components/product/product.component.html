@@ -1,5 +1,5 @@
 <!-- <img [src]="producto.image" alt="" width="200" /> -->
-<app-img [img]="producto.image"></app-img>
+<app-img *ngIf="producto.images.length > 0" [img]="producto.images[0]"></app-img>
 <h2 appHighlight> {{ producto.price | currency: 'DOP ' }}</h2>
 <p> {{ producto.title }}</p>
 <p> {{ producto.description }}</p>
