@@ -1,10 +1,17 @@
 <p> Cantidad de productos agregados:  {{ myShoppingCart.length }} en el día {{ today | date: 'short' }}</p>
 <p> Y el valor total acumulado es: {{ total }}</p>
 <p> Fue lanzado el : {{ date | timeAgo }}</p>
+<button type="button" (click)="toggleProductDetail()">Ver detalle</button>
 <div class="products--grid">
   <app-product
     [producto]="product"
     *ngFor="let product of products"
     (addedProduct)="onAddToShoppingCart($event)"
   ></app-product>
+</div>
+<div class="product-detail" [class.active]="showProductDetail" >
+  <div>
+    <button (click)="toggleProductDetail()">Close</button>
+    <p>Contenido</p>
+  </div>
 </div>

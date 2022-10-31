@@ -3,4 +3,5 @@
 <h2 appHighlight> {{ producto.price | currency: 'DOP ' }}</h2>
 <p> {{ producto.title }}</p>
 <p> {{ producto.description }}</p>
+<button (click)="onShowDetail()">Ver Detalle</button>
 <button (click)="onAddToCart()">Add cart</button>

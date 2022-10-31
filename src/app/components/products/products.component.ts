@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit {
   }
 
   products: Product[] = [];
+  showProductDetail = false;
 
   today = new Date();
   date = new Date(2021,1,21);
@@ -75,7 +76,10 @@ export class ProductsComponent implements OnInit {
   onAddToShoppingCart(producto: Product) {
     this.storeService.addProduct(producto);
     this.total = this.storeService.getTotal();
-    
+  }
+
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail;
   }
 
 }
